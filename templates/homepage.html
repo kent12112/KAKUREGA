@@ -1,0 +1,139 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<style>
+    .homepage-image{
+        width: 100%;
+        height: 100%;
+        filter: brightness(50%)
+    }.bold{
+      font-weight: bold;
+      font-size: 50;
+    }.text-overlay {
+      font-size: 100px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-weight: bold;
+      text-align: center;
+    }.description{
+      display: flex;
+      align-items: center;
+      place-content: center;
+      min-height: 400px;
+    }.description-text{
+      display: inline-block;
+      font-size: 20px;
+      text-align: center;
+      width: 90%;
+      font-family:serif;
+      color: rgb(86, 84, 84);
+    }.image-japanese-food{
+      width: 450px;
+      height: 675px;
+    }.space{
+      height: 70px;
+    }
+    .description-image{
+      display: flex;
+      place-items: center;
+      place-content: center;
+      align-items: center;
+    }.text-overlay2{
+      display: inline-block;
+      font-family:serif;
+      font-size: 25px;
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+      text-align: center;
+    }.fourthrow{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family:serif;
+      font-size: 30px;
+      font-weight: bold;
+      height: 100px;
+      border-top-style: solid;
+      border-top-width: 1px;
+      border-top-color: rgb(127, 125, 125);
+    }.kento-pick-text{
+      display: inline-block;
+      font-family:serif;
+      font-size: 40px;
+    }.pick-image{
+      background-color: azure;
+      width: 300px;
+      height: 210px;
+      border-radius: 10px;
+    }.pick-image:hover{
+      width: 310px;
+      height: 220px;
+    }.pick-title{
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      font-family:serif;
+    }.pick-image-container{
+      display: flex;
+      justify-content: center;
+    }.container-for-pick{
+      background-color: rgb(232, 230, 230);
+      border-style: solid;
+      border-width: 1px;
+      border-color: rgb(157, 155, 155);
+      border-radius: 10px;
+      padding: 20px;
+    }.fourthrow{
+      margin-top: 20px;
+    }.reviews-username{
+      margin-top: 15px;
+      margin-bottom: -5px;
+      font-family:serif;
+      font-weight: bold;
+    }.reviews-review{
+      font-family:serif;
+    }.reviews-rate{
+      margin-top:0px;
+    }.kento-pick{
+      margin-bottom: 50px;
+    }body{
+      background-color: rgb(198, 189, 172);
+    }
+</style>
+<script>three_data = {{three_data|tojson}}</script>
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'homepage.js') }}"></script>
+<div class="row firstrow">
+  <div class="container1 col-md-12 col-lg-12 col-12">
+    <img src="https://thevendry.com/cdn-cgi/image/width=3840,quality=75,fit=contain,metadata=none,format=auto/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fuploads.thevendry.co%2F22216%2F1678686813979_318294989_131799303034114_7771919368417206878_n.jpg" alt="Image of fancy Japanese restaurant" class="homepage-image">
+    <div class="text-overlay title">Welcome To KAKUREGA</div>
+ </div>
+</div>
+<div class="row secondrow"><div class="space col-md-12 col-lg-12 col-12"></div></div>
+<div class="row thirdrow">
+    <div class="description-container col-md-12 col-lg-12 col-12 row">
+    <div class="description col-md-12 col-lg-6 col-12 col-sm-12">
+      <div class="text-overlay2">What are we here for?</div>
+      <div class="description-text">
+      Discover the best Japanese restaurants in New York City with KAKUREGA!
+      "Kakurega" is the Japanese term meaning 'hidden place' or 'secret retreat'.
+      Explore authentic flavors, from sushi to ramen, and find your perfect culinary experience in the heart of the city. 
+      Your Japanese dining adventure starts here!
+    </div>
+  </div>
+    <div class="description-image col-md-12 col-lg-6 col-sm-12 col-12"> <img class="image-japanese-food"src="https://www.justonecookbook.com/wp-content/uploads/2021/02/Osechi-Ryori-2021-3774-II.jpg" alt="example of Japanese food"></div>
+    </div>
+</div>
+
+<div class="row fourthrow"><div class="kento-pick-text">Trends</div></div>
+<div class="kento-pick row"></div>
+
+
+{% endblock %}

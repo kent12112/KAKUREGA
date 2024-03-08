@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script>data = {{data|tojson}}</script>
+<script>search_term = {{search_term|tojson}}</script>
+
+    <script type="text/javascript" src="{{ url_for('static', filename = 'search.js') }}">
+    </script>
+
+    <style>
+        body{
+      background-color: rgb(198, 189, 172);
+      font-family: serif;
+    }
+    .container-for-record{
+            background-color: rgb(232, 230, 230);
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(232, 231, 231);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top:10px;
+        }
+    .record-image{
+        width: 300px;
+        height: 200px;
+        border-radius: 10px;
+    }.record-title{
+        font-size: 30px;
+        font-weight: bold;
+        font-family: serif;
+    }.record-types{
+        display: flex;
+    }.eachtype{
+        margin-right: 5px;
+        background-color: rgb(216, 214, 214);
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-weight: bold;
+        font-family: serif;
+        color:rgb(76, 75, 75);
+        border-radius: 10px;
+    }.record-price{
+        margin-bottom: 0px;
+        margin-top: 7px;
+        background-color: rgb(249, 214, 108);
+        padding-left: 3px;
+        padding-right: 3px;
+        border-radius: 8px;
+        margin-right: -100px;
+        display: inline-block;
+        vertical-align: bottom;
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: rgb(60, 59, 59);
+        font-size: 15px;
+        font-family: serif;
+    }.record-area{
+        margin-top: 0px;
+        font-size: 15px;
+        font-weight: bold;
+        font-family: serif;
+    }.record-reviews{
+        margin-top: 5px;
+        font-size: 15px;
+        font-family: serif;
+    }
+    a{
+        color:rgb(0, 0, 0);
+    }.highlight{
+            background-color: rgb(254, 232, 186);
+            font-weight: bold;
+            padding: 0px
+        }
+    </style>
+
+    <div class="record row">
+
+    </div>
+
+
+
+
+{% endblock %}
+

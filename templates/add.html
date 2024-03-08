@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Item</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+</head>
+<body>
+<style>
+  .header{
+    font-family: serif;
+  }
+  .error{
+    color: red;
+    font-weight: bold;
+    margin-left: 5px;
+  }#successMessage{
+  font-weight: bold;
+  color: green;
+  }body{
+      background-color: rgb(198, 189, 172);
+    }
+</style>
+<div class="container mt-5">
+    <h2>Add New Restaurant</h2>
+    <div id="successMessage" class="mt-3"></div>
+    <form id="addItemForm">
+        <div class="form-group">
+            <label for="title">*Title:</label><span class= "error" id="titleError"></span>
+            <input type="text" class="form-control" id="title" name="title" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="image">*Image URL:</label><span class= "error" id="imageError"></span>
+            <input type="text" class="form-control" id="image" name="image" required>
+        </div>
+
+        <div class="form-group">
+            <label for="webpage">*Webpage URL:</label><span class= "error" id="webpageError"></span>
+            <input type="text" class="form-control" id="webpage" name="webpage" required>
+        </div>
+
+        <div class="form-group">
+            <label for="price">*Price:</label><span class= "error" id="priceError"></span>
+            <input type="text" class="form-control" id="price" name="price" required>
+        </div>
+
+        <div class="form-group">
+            <label for="summary">*Summary:</label><span class= "error" id="summaryError"></span>
+            <textarea class="form-control" id="summary" name="summary" rows="4" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="popular">*Popular:</label><span class= "error" id="popularError"></span>
+            <input type="text" class="form-control" id="popular" name="popular" placeholder="Enter popular items separated by commas" required>
+        </div>
+
+        <div class="form-group">
+            <label for="types">*Types:</label><span class= "error" id="typesError"></span>
+            <input type="text" class="form-control" id="types" name="types" placeholder="Enter types separated by commas" required>
+        </div>
+
+        <div class="form-group">
+            <label for="username">*Username of the guest:</label><span class= "error" id="usernameError"></span>
+            <input type="text" class="form-control" id="username" name="username" required>
+        </div>
+
+        <div class="form-group">
+            <label for="rate">*Rate by the guest:</label><span class= "error" id="rateError"></span>
+            <input type="text" class="form-control" id="rate" name="rate" required>
+        </div>
+
+        <div class="form-group">
+            <label for="review">*Review by the guest:</label><span class= "error" id="reviewError"></span>
+            <textarea class="form-control" id="review" name="review" rows="4" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="area">*Area:</label><span class= "error" id="areaError"></span>
+            <input type="text" class="form-control" id="area" name="area" required>
+        </div>
+
+        <button type="button" class="btn btn-primary" onclick="addItem()">Submit</button>
+    </form>
+</div>
+
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="{{ url_for('static', filename='add.js') }}"></script>
+
+</body>
+</html>
+{% endblock %}

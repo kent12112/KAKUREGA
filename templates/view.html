@@ -1,0 +1,140 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<style>
+  .title{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: serif;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-bottom: 10px;
+  }.edit-button{
+    font-weight: bold;
+    margin-top: 20px;
+    background-color: rgb(249, 214, 108);
+    border-radius: 10px;
+    border-color: rgb(85, 84, 84);
+    border-width: 1.5px;
+  }.edit-button:hover{
+    background-color: rgb(251, 239, 206);
+  }.view{
+    margin-top: 0px;
+    margin-bottom: 50px;
+  }.image{
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }.title-price{
+    display: flex;
+    align-items: center;
+  }.price {
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: rgb(249, 214, 108);
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 8px;
+    margin-right: -100px;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: rgb(60, 59, 59);
+    font-size: 17px;
+    font-family: serif;
+  }
+  .summary{
+    margin-top: 5px;
+    font-family: serif;
+    font-size: 20px;
+  }.about{
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 20px;
+    font-family: serif;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: rgb(161, 158, 158);
+  }.right-side{
+    padding-left: 50px;
+    place-items: center;
+  }.popular-title{
+    margin-top: 80px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: serif;
+  }.dishes{
+    font-family: serif;
+    font-weight: bold;
+    color: rgb(68, 67, 67);
+  }
+  .types-title{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    font-family: serif;
+  }.types{
+    padding: 10px;
+    display: flex;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(161, 158, 158);
+    font-family: serif;
+  }.eachtype{
+    margin-right: 5px;
+    background-color: rgb(216, 214, 214);
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: bold;
+    font-family: serif;
+    color:rgb(76, 75, 75);
+    border-radius: 10px;
+    font-family: serif;
+  }.reviews-title{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 7px;
+    font-family: serif;
+  }.reviews-username{
+    font-weight: bold;
+    margin-bottom: 0px;
+    font-family: serif;
+  }.reviews-rate{
+    margin-top: 0px;
+    font-family: serif;
+  }.reviews-review{
+    font-family: serif;
+  }.review-content{
+    border-style: solid;
+    border-color: rgb(194, 191, 191);
+    border-width: 1px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(236, 232, 232);
+  }.visit{
+    color: rgb(68, 67, 67);
+    font-weight: bold;
+    font-size: 20px;
+  }body{
+      background-color: rgb(198, 189, 172);
+    }
+</style>
+<script>oneData = {{oneData|tojson}}</script>
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'view.js') }}"></script>
+
+
+
+    <a href="{{ url_for('edit_item', id=oneData.id) }}" class="btn edit-button">Edit</a>
+    <div class="view">
+            kento
+    </div>
+
+
+
+
+
+{% endblock %}
